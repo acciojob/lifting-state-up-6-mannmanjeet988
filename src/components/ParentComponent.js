@@ -12,11 +12,12 @@ const ParentComponent = () =>{
     const updateStatus = (taskid) => {
         const updatedTodos = todos.map((todo) => {
           if (todo.id === taskid) {
-            todo.state = true;
+            todo.state = completed;
           }
           return todo;
         });
-    
+
+        
         setTodos(updatedTodos);
       };
     
