@@ -12,7 +12,7 @@ const ChildComponent = ({todos,updateStatus}) =>{
                 return(
                     <li>
                         {todo.text}
-                        {!todo.isCompleted && <button onClick={() => updateStatus(todo.id)}>Complete</button>}
+                        {!todo.completed && <button onClick={() => updateStatus(todo.id)}>Complete</button>}
                     </li>
                 )
             })

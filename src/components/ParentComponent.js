@@ -3,21 +3,20 @@ import ChildComponent from "./ChildComponent";
 const ParentComponent = () =>{
 
     const [todos,setTodos]=useState([
-        {id:1 , text : "Learn React", isCompleted :false},
-        {id:2 , text : "Build a React App", isCompleted :false},
-        {id:3 , text : "Deploy the React app", isCompleted :false}
+        {id:1 , text : "Learn React", completed :false},
+        {id:2 , text : "Build a React App", completed :false},
+        {id:3 , text : "Deploy the React app", completed :false}
     ])
 
     // updating state true
     const updateStatus = (taskid) => {
         const updatedTodos = todos.map((todo) => {
           if (todo.id === taskid) {
-            return {...todo, isCompleted:true}
+            todo.completed = true;
+            //     return {...todo, completed:true}
           }
           return todo;
-        });
-
-
+        } );
         setTodos(updatedTodos);
       };
     
